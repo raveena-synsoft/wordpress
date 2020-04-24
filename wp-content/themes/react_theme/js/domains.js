@@ -1,6 +1,6 @@
 
 
-/*if (jQuery(window).width() >= 1025) {
+if (jQuery(window).width() >= 1025) {
   $(document).ready(function() {
     anchors = [];
     navigation = [];
@@ -14,7 +14,7 @@
       }
    });
   });   
-}*/
+}
   $(document).on('mouseenter', 'li.feature_html', function() {
     var id = $(this).attr('id');
     $("div.left_container").removeClass("show_flex");

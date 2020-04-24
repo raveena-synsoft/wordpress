@@ -129,9 +129,10 @@ function get_post_domain_technology( $data ) {
 	foreach ($technology as $key => $value) {
 		$techpage['tech'][$key]['post_id'] = $value->ID;
 		$techpage['tech'][$key]['post_image'] = get_field('banner_image', $value->ID);
+		
 		$techpage['tech'][$key]['post_slug'] = $value->post_name;
 		$techpage['tech'][$key]['post_title'] = $value->post_title;
-		$techpage['tech'][$key]['post_content'] =$value->post_content;//
+		$techpage['tech'][$key]['post_content'] =get_field('what_we_do_section_content', $value->ID);//$value->post_content;//
 	}
 	
 	$domain =   get_posts(array(
