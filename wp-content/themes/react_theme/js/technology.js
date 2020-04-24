@@ -7,8 +7,11 @@ if (jQuery(window).width() <= 767) {
 		$(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(200).end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(200);
 	});
 }
+$(document).ready(function() {
+    $('#pagepiling').pagepiling({});
+});
 
-if (jQuery(window).width() >= 1025) {
+/*if (jQuery(window).width() >= 1025) {
     // your codes goes here;
 
 	  $(document).ready(function() {
@@ -22,7 +25,7 @@ if (jQuery(window).width() >= 1025) {
 			   	}
 			});
 	    });		
-}
+}*/
 
 
   var $animation_elements = $('.animation-element');

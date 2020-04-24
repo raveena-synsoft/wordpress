@@ -50,8 +50,10 @@
     <!-- CSS for full page scroll css -->
     <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATE_PATH; ?>/react-src/public/css/jquery.pagepiling.min.css" />
     <title>Synsoft Global</title>
-<link href="/wordpress/wp-content/themes/react_theme/static/css/1.chunk.css?fbeb7c31b9df747067c2" rel="stylesheet"><link href="/wordpress/wp-content/themes/react_theme/static/css/main.chunk.css?fbeb7c31b9df747067c2" rel="stylesheet"></head>
+<link href="/wordpress/wp-content/themes/react_theme/static/css/1.chunk.css?84bc91e41d4fcb981a9a" rel="stylesheet"><link href="/wordpress/wp-content/themes/react_theme/static/css/main.chunk.css?84bc91e41d4fcb981a9a" rel="stylesheet"></head>
     <body class='home'>
+    <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/jquery-3.4.1.min.js"></script>
+        
     <script type="text/javascript">
         window.template_path ="<?php echo $TEMPLATE_PATH; ?>";
         window.base_path ="<?php echo get_site_url(); ?>";
@@ -70,7 +72,6 @@
         To begin the development, run `npm run wpstart` or `yarn wpstart`.
         To create a production bundle, use `npm run wpbuild` or `yarn wpbuild`.
     -->
-    <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/jquery-3.4.1.min.js"></script>
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/bootstrap.min.js"></script>
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/slick.min.js" type="text/javascript"></script>
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/navigation.js"></script>
@@ -80,5 +81,5 @@
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/smartphoto.js"></script>
 
     
-    <script src="/wordpress/wp-content/themes/react_theme/static/js/bundle.js?fbeb7c31b9df747067c2"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/1.chunk.js?fbeb7c31b9df747067c2"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/main.chunk.js?fbeb7c31b9df747067c2"></script></body>
+    <script src="/wordpress/wp-content/themes/react_theme/static/js/bundle.js?84bc91e41d4fcb981a9a"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/1.chunk.js?84bc91e41d4fcb981a9a"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/main.chunk.js?84bc91e41d4fcb981a9a"></script></body>
 </html>

@@ -106,4 +106,62 @@ function cw_post_type_testimonial() {
 	register_post_type('testimonials', $args);
 }
 add_action('init', 'cw_post_type_testimonial');*/
+
+
+
+function get_post_domain_technology( $data ) {
+	$pageurl 	 = get_site_url()."/wp-json/wp/v2/pages?slug=home";
+	$pagecontent = file_get_contents($pageurl);
+	$homecontent = json_decode($pagecontent);
+	$args = 
+		array(
+			'post_type' => 'page', 
+			'meta_query' => array(
+                array(
+                    'key' => 'include_in_what_we_do_at_homepage', 
+                    'value' => 'yes', 
+                )
+         	)
+		);
+	$the_query = new WP_Query( $args ); 
+	$technology = $the_query->posts;	
+	$techpage['tech'] = [];
+	foreach ($technology as $key => $value) {
+		$techpage['tech'][$key]['post_id'] = $value->ID;
+		$techpage['tech'][$key]['post_image'] = get_field('banner_image', $value->ID);
+		$techpage['tech'][$key]['post_slug'] = $value->post_name;
+		$techpage['tech'][$key]['post_title'] = $value->post_title;
+		$techpage['tech'][$key]['post_content'] =$value->post_content;//
+	}
+	
+	$domain =   get_posts(array(
+					'post_type' => 'domains',
+					'meta_query' => array(
+				        array(
+				            'key' => 'include_post_in_homepage',
+				            'value' => 'yes',
+				        )
+					)
+				));
+	$domainPosts['domain'] = [];	
+	foreach ($domain as $key => $value) {
+		$domainPosts['domain'][$key]['post_id'] = $value->ID;
+		$domainPosts['domain'][$key]['post_image'] = get_field('domain_image', $value->ID);
+		$domainPosts['domain'][$key]['post_slug'] = $value->post_name;
+		$domainPosts['domain'][$key]['post_title'] = $value->post_title;
+		$domainPosts['domain'][$key]['post_content'] =$value->post_content;//
+	}
+    if ( empty( $homecontent ) ) {
+        return null;
+    }
+    $page = array_merge( $domainPosts, $techpage, $homecontent);
+    return $page;
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'wp/v2', '/homepage', array(
+        'methods' => 'GET',
+        'callback' => 'get_post_domain_technology'
+    ) );
+} );
 ?>

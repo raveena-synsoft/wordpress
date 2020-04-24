@@ -16,7 +16,11 @@ if (jQuery(window).width() <= 767) {
 }
 
 // Full page scroll JS  -->
+
+$('#pagepiling').pagepiling({});
 $(document).ready(function() {
+});
+/*$(document).ready(function() {
     anchors = [];
     navigation = [];
     if (jQuery(window).width() >= 1025) {
@@ -41,7 +45,7 @@ $(document).ready(function() {
         });
 
     }
-});
+});*/
 
 $(document).ready(function() {
     //carousel interval
