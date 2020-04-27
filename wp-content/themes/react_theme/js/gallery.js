@@ -55,7 +55,7 @@ $(document).ready(function() {
 	// Full page scroll JS	 
 	if (jQuery(window).width() >= 1025) {
 
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 
 			/*
 			    Plugin intialization
@@ -80,7 +80,7 @@ $(document).ready(function() {
 			    }
 			});
 
-		});
+		});*/
 	}
 //});
     

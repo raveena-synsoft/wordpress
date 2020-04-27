@@ -26,7 +26,7 @@
 	if (jQuery(window).width() >= 1025) {
    
 
-	  $(document).ready(function() {
+	  /*$(document).ready(function() {
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
 	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
@@ -36,7 +36,7 @@
 			   	'tooltips': ['About Us',  'The Offshore Model', 'Why Us', 'How It Works', 'So Far', 'Connect With Us', 'Quick Links']
 			   	}
 			});
-	    });		
+	    });		*/
 }
 	if (jQuery(window).width() <= 767) {
    

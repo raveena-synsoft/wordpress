@@ -69,11 +69,8 @@ var imageitem = ['fintech', 'retail', 'insurance', 'cryptocurrency', 'supply_cha
 	 
 	 if (jQuery(window).width() >= 1025) {
 	 
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 
-			/*
-			    Plugin intialization
-			*/
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
 	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7' ],
@@ -94,7 +91,7 @@ var imageitem = ['fintech', 'retail', 'insurance', 'cryptocurrency', 'supply_cha
 			    }
 			});
 
-	    });
+	    });*/
 	 }
     document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');	
 

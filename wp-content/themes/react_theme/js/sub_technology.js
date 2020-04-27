@@ -107,7 +107,7 @@ $('.responsive').slick({
 	
 	if (jQuery(window).width() >= 1025) {
     // your codes goes here;
-
+/*
 	  $(document).ready(function() {
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
@@ -118,7 +118,7 @@ $('.responsive').slick({
 			   	'tooltips': ['Page 1', 'Pgae 2', 'page3', 'page4', 'page5', 'Connect With Us', 'Quick Links']
 			   	}
 			});
-	    });		
+	    });		*/
 }
  
 

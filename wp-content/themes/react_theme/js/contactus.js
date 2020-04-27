@@ -25,7 +25,7 @@ $(document).ready(function(){
 }); 
 	
 if (jQuery(window).width() >= 1025) {
-  $(document).ready(function() {
+  /*$(document).ready(function() {
     	$('#pagepiling').pagepiling({
     		menu: '#menu',
     		anchors: ['page1', 'page2', 'page3'],
@@ -35,7 +35,7 @@ if (jQuery(window).width() >= 1025) {
 		   	'tooltips': ['Introduction',  'Connect With Us', 'Quick links']
 		   	}
 		});
-  });		
+  });	*/	
 }
 
 

@@ -238,7 +238,7 @@ function App() {
       columnNumber: 13
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Route"], {
-    path: "/technology/:id",
+    path: "/technology/:slug",
     component: _pages_Technologies__WEBPACK_IMPORTED_MODULE_14__["default"],
     __self: this,
     __source: {
@@ -364,19 +364,29 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
       if (index.child_items) {
         index.child_items.map(function (childIndex) {
+          const url_slug = '';
+
+          if (childIndex.type === "domains") {
+            url_slug = "/domains/";
+          }
+
+          if (childIndex.type === "technology") {
+            url_slug = "/technology/";
+          }
+
           menuLi.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 40,
+              lineNumber: 47,
               columnNumber: 33
             }
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-            to: childIndex.url,
+            to: url_slug + childIndex.slug,
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 40,
+              lineNumber: 47,
               columnNumber: 37
             }
           }, childIndex.title)));
@@ -388,7 +398,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 51,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
@@ -396,14 +406,14 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 52,
           columnNumber: 29
         }
       }, " ", index.title, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 53,
           columnNumber: 29
         }
       }, menuLi)));
@@ -417,7 +427,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 64,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -425,7 +435,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 65,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -433,7 +443,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 66,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -441,7 +451,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 67,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -449,7 +459,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 68,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -457,7 +467,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62,
+        lineNumber: 69,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -465,7 +475,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63,
+        lineNumber: 70,
         columnNumber: 37
       }
     }, menuHtml))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -473,7 +483,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 75,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -481,7 +491,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 76,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -489,21 +499,21 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 77,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 78,
         columnNumber: 41
       }
     }, "Mailing Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
+        lineNumber: 79,
         columnNumber: 41
       }
     }, "123 Anywhere St., Any City, State, Country 12345")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -511,21 +521,21 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74,
+        lineNumber: 81,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75,
+        lineNumber: 82,
         columnNumber: 41
       }
     }, "Email Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 83,
         columnNumber: 41
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -533,7 +543,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 83,
         columnNumber: 44
       }
     }, "hello@reallygreatsite.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -541,21 +551,21 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 85,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 86,
         columnNumber: 41
       }
     }, "Phone Number"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
+        lineNumber: 87,
         columnNumber: 41
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -563,7 +573,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
+        lineNumber: 87,
         columnNumber: 45
       }
     }, "(123) 456 7890"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -571,21 +581,21 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 89,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 90,
         columnNumber: 41
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 91,
         columnNumber: 45
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -593,7 +603,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 92,
         columnNumber: 49
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -602,14 +612,14 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 92,
         columnNumber: 63
       }
     }), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87,
+        lineNumber: 94,
         columnNumber: 45
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -617,7 +627,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88,
+        lineNumber: 95,
         columnNumber: 49
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -626,14 +636,14 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88,
+        lineNumber: 95,
         columnNumber: 63
       }
     }), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90,
+        lineNumber: 97,
         columnNumber: 45
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -641,7 +651,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 98,
         columnNumber: 49
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -650,14 +660,14 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 98,
         columnNumber: 63
       }
     }), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 100,
         columnNumber: 45
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -665,7 +675,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 101,
         columnNumber: 49
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -674,7 +684,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 101,
         columnNumber: 63
       }
     }), " "))))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -682,7 +692,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 110,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -692,7 +702,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 111,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -701,7 +711,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 111,
         columnNumber: 99
       }
     }))));
@@ -843,13 +853,15 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       }
 
       if (index.slug === 'web-applications') {
+        const childItems = [];
+
         if (index.child_items) {
           index.child_items.map(function (childIndex) {
             return childItems.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75,
+                lineNumber: 76,
                 columnNumber: 48
               }
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -857,10 +869,17 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
               __self: this,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75,
+                lineNumber: 76,
                 columnNumber: 52
               }
-            }, childIndex.title, "   ")));
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 76,
+                columnNumber: 78
+              }
+            }, " > "), childIndex.title, "   ")));
           });
         }
 
@@ -869,27 +888,19 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80,
+            lineNumber: 82,
             columnNumber: 7
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "animatemenu submenu-mobile submenu-desktop",
-          to: "/#",
+          to: "/technology/" + index.slug,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81,
+            lineNumber: 83,
             columnNumber: 8
           }
-        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "sub-menu",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 84,
-            columnNumber: 25
-          }
-        }, childItems), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "sub_menu_cls dropdown-menu",
           "aria-labelledby": "navbarDropdown",
           __self: this,
@@ -903,7 +914,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
+            lineNumber: 90,
             columnNumber: 29
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -911,14 +922,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90,
+            lineNumber: 91,
             columnNumber: 33
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91,
+            lineNumber: 92,
             columnNumber: 37
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -926,37 +937,30 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91,
+            lineNumber: 92,
             columnNumber: 41
           }
-        }, "FEATURED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        }, "FEATURED")), typeof index.child_items[0].title !== 'undefined' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "pwa_amp",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
-            columnNumber: 37
+            lineNumber: 94,
+            columnNumber: 42
           }
         }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           to: "/#",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
-            columnNumber: 62
+            lineNumber: 94,
+            columnNumber: 67
           }
-        }, "PWA & ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        }, index.child_items[0].title)) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
-            columnNumber: 82
-          }
-        }, "AMP"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 93,
+            lineNumber: 96,
             columnNumber: 37
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -964,7 +968,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94,
+            lineNumber: 97,
             columnNumber: 41
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -973,7 +977,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94,
+            lineNumber: 97,
             columnNumber: 55
           }
         }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -981,520 +985,65 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98,
+            lineNumber: 101,
             columnNumber: 29
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99,
+            lineNumber: 102,
             columnNumber: 33
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 100,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 101,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 101,
-            columnNumber: 56
-          }
-        }, " > "), " Full-stack development")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 103,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 104,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 104,
-            columnNumber: 56
-          }
-        }, " > "), " React, Angular, Vue")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 106,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 107,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 107,
-            columnNumber: 56
-          }
-        }, " > "), " Node Js")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 109,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 110,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 110,
-            columnNumber: 56
-          }
-        }, " > "), " ASP.Net, C#, MVC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 112,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 113,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 113,
-            columnNumber: 56
-          }
-        }, " > "), " PHP, CI, L aravel")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 115,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 116,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 116,
-            columnNumber: 56
-          }
-        }, " > "), " CMS,WordPress")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 118,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 119,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 119,
-            columnNumber: 56
-          }
-        }, " > "), " Commerce")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 121,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 122,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 122,
-            columnNumber: 56
-          }
-        }, " > "), " PWA,AMP")))))));
+        }, childItems)))));
       }
 
       if (index.slug === "mobility") {
+        const childItems = [];
+
+        if (index.child_items) {
+          index.child_items.map(function (childIndex) {
+            return childItems.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 114,
+                columnNumber: 48
+              }
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+              to: "/technology/" + index.slug,
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 114,
+                columnNumber: 52
+              }
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 114,
+                columnNumber: 89
+              }
+            }, " > "), childIndex.title, "   ")));
+          });
+        }
+
         mods.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "nav-item dropdown item-has-children",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 132,
+            lineNumber: 120,
             columnNumber: 8
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "animatemenu submenu-mobile submenu-desktop",
-          to: "/#",
+          to: "/technology/" + index.slug,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 133,
-            columnNumber: 25
-          }
-        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "sub-menu",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 134,
-            columnNumber: 25
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 135,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 135,
-            columnNumber: 33
-          }
-        }, "iOS Development")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 136,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 136,
-            columnNumber: 33
-          }
-        }, "Android Development")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 137,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 137,
-            columnNumber: 33
-          }
-        }, "React Native")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 138,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 138,
-            columnNumber: 33
-          }
-        }, "Xamarin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 139,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 139,
-            columnNumber: 33
-          }
-        }, "Ionic, Cordova"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "sub_menu_cls dropdown-menu",
-          "aria-labelledby": "navbarDropdown",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 141,
-            columnNumber: 25
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "inner_first",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 142,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "left-menubox",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 143,
-            columnNumber: 33
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 144,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 144,
-            columnNumber: 41
-          }
-        }, "FEATURED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "pwa_amp",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 145,
-            columnNumber: 37
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 145,
-            columnNumber: 62
-          }
-        }, "React Native")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 146,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 147,
-            columnNumber: 41
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          alt: "text",
-          src: window.template_path + "/react-src/public/images/mobile.png",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 147,
-            columnNumber: 55
-          }
-        }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "inner_second",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 151,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 152,
-            columnNumber: 33
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 153,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 154,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 154,
-            columnNumber: 56
-          }
-        }, " > "), " iOS Development")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 156,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 157,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 157,
-            columnNumber: 56
-          }
-        }, " > "), " Android Development")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 159,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 160,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 160,
-            columnNumber: 56
-          }
-        }, " > "), " React Native")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 162,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 163,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 163,
-            columnNumber: 56
-          }
-        }, " > "), " Xamarin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 165,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 166,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 166,
-            columnNumber: 56
-          }
-        }, " > "), " Ionic, Cordova")))))));
-      }
-
-      if (index.slug === "blockchain") {
-        mods.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "nav-item dropdown",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 176,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          className: "animatemenu submenu-desktop",
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 177,
+            lineNumber: 121,
             columnNumber: 25
           }
         }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1503,7 +1052,123 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 178,
+            lineNumber: 123,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "inner_first",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 124,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "left-menubox",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 125,
+            columnNumber: 33
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126,
+            columnNumber: 37
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126,
+            columnNumber: 41
+          }
+        }, "FEATURED")), typeof index.child_items[0].title !== 'undefined' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "pwa_amp",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128,
+            columnNumber: 42
+          }
+        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128,
+            columnNumber: 67
+          }
+        }, index.child_items[0].title)) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130,
+            columnNumber: 37
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131,
+            columnNumber: 37
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          alt: "text",
+          src: window.template_path + "/react-src/public/images/mobile.png",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131,
+            columnNumber: 51
+          }
+        }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "inner_second",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 135,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 136,
+            columnNumber: 33
+          }
+        }, childItems)))));
+      }
+
+      if (index.slug === "blockchain") {
+        mods.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "nav-item dropdown",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 147,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "animatemenu submenu-desktop",
+          to: "/technology/" + index.slug,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148,
+            columnNumber: 25
+          }
+        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "sub_menu_cls dropdown-menu",
+          "aria-labelledby": "navbarDropdown",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 149,
             columnNumber: 25
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1511,14 +1176,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 179,
+            lineNumber: 150,
             columnNumber: 29
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 180,
+            lineNumber: 151,
             columnNumber: 33
           }
         }, "FEATURED"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1526,7 +1191,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 181,
+            lineNumber: 152,
             columnNumber: 33
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -1534,16 +1199,16 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 182,
+            lineNumber: 153,
             columnNumber: 37
           }
-        }, "blockchain & cryptocurrency"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           alt: "text",
           src: window.template_path + '/react-src/public/images/Blockchain.png',
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183,
+            lineNumber: 154,
             columnNumber: 37
           }
         }))))));
@@ -1555,16 +1220,16 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 192,
+            lineNumber: 163,
             columnNumber: 7
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "animatemenu submenu-desktop",
-          to: "/#",
+          to: "/technology/" + index.slug,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 194,
+            lineNumber: 165,
             columnNumber: 22
           }
         }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1573,7 +1238,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 195,
+            lineNumber: 166,
             columnNumber: 22
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1581,14 +1246,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 196,
+            lineNumber: 167,
             columnNumber: 26
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 197,
+            lineNumber: 168,
             columnNumber: 30
           }
         }, "FEATURED"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1596,7 +1261,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198,
+            lineNumber: 169,
             columnNumber: 30
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -1604,28 +1269,58 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199,
+            lineNumber: 170,
             columnNumber: 34
           }
-        }, "Cloud Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           alt: "text",
           src: window.template_path + '/react-src/public/images/Blockchain.png',
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200,
+            lineNumber: 171,
             columnNumber: 34
           }
         }))))));
       }
 
       if (index.slug === "domains") {
+        const childItems = [];
+
+        if (index.child_items) {
+          index.child_items.map(function (childIndex) {
+            return childItems.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 182,
+                columnNumber: 48
+              }
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+              to: "/domains/" + childIndex.slug,
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 182,
+                columnNumber: 52
+              }
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 182,
+                columnNumber: 91
+              }
+            }, " > "), childIndex.title, "   ")));
+          });
+        }
+
         mods.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "nav-item dropdown item-has-children",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 209,
+            lineNumber: 188,
             columnNumber: 7
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1635,144 +1330,16 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 210,
+            lineNumber: 189,
             columnNumber: 25
           }
-        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-          className: "sub-menu",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 211,
-            columnNumber: 25
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 212,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/domains",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 212,
-            columnNumber: 33
-          }
-        }, "Fintech")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 213,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/domains",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 213,
-            columnNumber: 33
-          }
-        }, "Retail")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 214,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/domains",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 214,
-            columnNumber: 33
-          }
-        }, "Insurance")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 215,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 215,
-            columnNumber: 33
-          }
-        }, "Cryptocurrency")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 216,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 216,
-            columnNumber: 33
-          }
-        }, "Supply Chain")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 217,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 217,
-            columnNumber: 33
-          }
-        }, "Health & Fitness")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 218,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 218,
-            columnNumber: 33
-          }
-        }, "e-Hailing")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 219,
-            columnNumber: 29
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 219,
-            columnNumber: 33
-          }
-        }, "Smart City Solutions"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, index.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "sub_menu_cls dropdown-menu",
           "aria-labelledby": "navbarDropdown",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 221,
+            lineNumber: 191,
             columnNumber: 25
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1780,7 +1347,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 222,
+            lineNumber: 192,
             columnNumber: 29
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1788,14 +1355,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 223,
+            lineNumber: 193,
             columnNumber: 33
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 224,
+            lineNumber: 194,
             columnNumber: 37
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1803,30 +1370,30 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 224,
+            lineNumber: 194,
             columnNumber: 41
           }
-        }, "FEATURED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        }, "FEATURED")), typeof index.child_items[0].title !== 'undefined' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "pwa_amp",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 225,
-            columnNumber: 37
+            lineNumber: 196,
+            columnNumber: 42
           }
         }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
+          to: "/domains/" + index.child_items[0].slug,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 225,
-            columnNumber: 62
+            lineNumber: 196,
+            columnNumber: 67
           }
-        }, "Lorem ipsum ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        }, index.child_items[0].title)) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226,
+            lineNumber: 199,
             columnNumber: 37
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1834,7 +1401,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227,
+            lineNumber: 200,
             columnNumber: 41
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1843,7 +1410,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227,
+            lineNumber: 200,
             columnNumber: 55
           }
         }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1851,193 +1418,17 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231,
+            lineNumber: 204,
             columnNumber: 29
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232,
+            lineNumber: 205,
             columnNumber: 33
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 233,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 234,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 234,
-            columnNumber: 56
-          }
-        }, " > "), " Fintech")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 236,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 237,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 237,
-            columnNumber: 56
-          }
-        }, " > "), " Retail")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 239,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 240,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 240,
-            columnNumber: 56
-          }
-        }, " > "), " Insurance")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 242,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 243,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 243,
-            columnNumber: 56
-          }
-        }, " > "), " Cryptocurrency")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 245,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 246,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 246,
-            columnNumber: 56
-          }
-        }, " > "), " Supply Chain")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 248,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 249,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 249,
-            columnNumber: 56
-          }
-        }, " > "), " Health & Fitness")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 251,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 252,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 252,
-            columnNumber: 56
-          }
-        }, " > "), " e-Hailing")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 254,
-            columnNumber: 37
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: "/#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 255,
-            columnNumber: 41
-          }
-        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 255,
-            columnNumber: 56
-          }
-        }, " > "), " Smart City Solutions")))))));
+        }, childItems)))));
       }
 
       if (index.slug === "blog") {
@@ -2046,7 +1437,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 265,
+            lineNumber: 215,
             columnNumber: 12
           }
         }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2055,7 +1446,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 265,
+            lineNumber: 215,
             columnNumber: 38
           }
         }, "Blog")));
@@ -2067,7 +1458,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 270,
+            lineNumber: 220,
             columnNumber: 6
           }
         }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2077,7 +1468,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 270,
+            lineNumber: 220,
             columnNumber: 32
           }
         }, "Contact")));
@@ -2091,7 +1482,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 277,
+        lineNumber: 227,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2099,7 +1490,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 279,
+        lineNumber: 229,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2109,7 +1500,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 280,
+        lineNumber: 230,
         columnNumber: 16
       }
     }, "SYNSOFT GLOBAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -2117,7 +1508,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 281,
+        lineNumber: 231,
         columnNumber: 16
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2126,7 +1517,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 281,
+        lineNumber: 231,
         columnNumber: 39
       }
     }), " "), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2134,7 +1525,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282,
+        lineNumber: 232,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2142,7 +1533,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 283,
+        lineNumber: 233,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2150,14 +1541,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 284,
+        lineNumber: 234,
         columnNumber: 20
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 285,
+        lineNumber: 235,
         columnNumber: 24
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -2165,7 +1556,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 286,
+        lineNumber: 236,
         columnNumber: 28
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2173,14 +1564,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 286,
+        lineNumber: 236,
         columnNumber: 55
       }
     }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287,
+        lineNumber: 237,
         columnNumber: 28
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -2189,7 +1580,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287,
+        lineNumber: 237,
         columnNumber: 32
       }
     }, "Blog")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -2197,7 +1588,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 290,
+        lineNumber: 240,
         columnNumber: 20
       }
     }, mods))));
@@ -4441,7 +3832,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 92,
         columnNumber: 4
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4450,7 +3841,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92,
+        lineNumber: 93,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4458,7 +3849,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 94,
         columnNumber: 6
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4466,7 +3857,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 95,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4474,7 +3865,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 97,
         columnNumber: 10
       }
     }, this.state.header), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4484,7 +3875,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98,
+        lineNumber: 99,
         columnNumber: 11
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4494,7 +3885,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 102,
         columnNumber: 10
       }
     }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4502,7 +3893,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102,
+        lineNumber: 103,
         columnNumber: 8
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4512,7 +3903,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102,
+        lineNumber: 103,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4521,7 +3912,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 104,
         columnNumber: 10
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4530,7 +3921,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107,
+        lineNumber: 108,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -4538,7 +3929,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109,
+        lineNumber: 110,
         columnNumber: 6
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4546,7 +3937,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110,
+        lineNumber: 111,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4554,7 +3945,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111,
+        lineNumber: 112,
         columnNumber: 10
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4562,7 +3953,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112,
+        lineNumber: 113,
         columnNumber: 12
       }
     }, Object.keys(this.state.domainsFeatures).map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4573,7 +3964,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116,
+        lineNumber: 117,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4581,7 +3972,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117,
+        lineNumber: 118,
         columnNumber: 18
       }
     }, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4589,7 +3980,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118,
+        lineNumber: 119,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
@@ -4597,7 +3988,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119,
+        lineNumber: 120,
         columnNumber: 20
       }
     }, this.state.domainsFeatures[item].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4605,14 +3996,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122,
+        lineNumber: 123,
         columnNumber: 20
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123,
+        lineNumber: 124,
         columnNumber: 22
       }
     }, this.state.domainsFeatures[item].content)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4620,14 +4011,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131,
+        lineNumber: 132,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132,
+        lineNumber: 133,
         columnNumber: 14
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -4635,7 +4026,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133,
+        lineNumber: 134,
         columnNumber: 16
       }
     }, " features "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4643,7 +4034,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 136,
         columnNumber: 16
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -4651,7 +4042,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 136,
         columnNumber: 75
       }
     }), " "), Object.keys(this.state.domainsFeatures).map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -4660,7 +4051,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
+        lineNumber: 139,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
@@ -4668,7 +4059,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
+        lineNumber: 139,
         columnNumber: 66
       }
     }, this.state.domainsFeatures[item].title))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4676,7 +4067,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146,
+        lineNumber: 147,
         columnNumber: 8
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4686,7 +4077,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146,
+        lineNumber: 147,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4695,7 +4086,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 148,
         columnNumber: 10
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4704,7 +4095,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 152,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -4712,7 +4103,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 154,
         columnNumber: 6
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4720,7 +4111,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 154,
+        lineNumber: 155,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4728,7 +4119,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 156,
         columnNumber: 10
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4736,7 +4127,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156,
+        lineNumber: 157,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4744,14 +4135,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157,
+        lineNumber: 158,
         columnNumber: 14
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158,
+        lineNumber: 159,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -4759,7 +4150,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159,
+        lineNumber: 160,
         columnNumber: 18
       }
     }, "Could you send me the portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4767,14 +4158,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160,
+        lineNumber: 161,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161,
+        lineNumber: 162,
         columnNumber: 20
       }
     }, "My email id is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -4782,7 +4173,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162,
+        lineNumber: 163,
         columnNumber: 20
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4790,7 +4181,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 164,
+        lineNumber: 165,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -4799,7 +4190,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165,
+        lineNumber: 166,
         columnNumber: 20
       }
     }, "send request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4807,7 +4198,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166,
+        lineNumber: 167,
         columnNumber: 20
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -4815,7 +4206,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166,
+        lineNumber: 167,
         columnNumber: 94
       }
     }), " "))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4823,7 +4214,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171,
+        lineNumber: 172,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4831,7 +4222,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172,
+        lineNumber: 173,
         columnNumber: 14
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4839,7 +4230,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173,
+        lineNumber: 174,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4849,7 +4240,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174,
+        lineNumber: 175,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
@@ -4857,7 +4248,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176,
+        lineNumber: 177,
         columnNumber: 20
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -4867,7 +4258,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177,
+        lineNumber: 178,
         columnNumber: 22
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -4876,7 +4267,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 178,
+        lineNumber: 179,
         columnNumber: 22
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -4885,7 +4276,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 179,
+        lineNumber: 180,
         columnNumber: 22
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4893,7 +4284,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182,
+        lineNumber: 183,
         columnNumber: 20
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4901,7 +4292,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183,
+        lineNumber: 184,
         columnNumber: 22
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -4909,7 +4300,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
+        lineNumber: 185,
         columnNumber: 24
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4918,7 +4309,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185,
+        lineNumber: 186,
         columnNumber: 26
       }
     }), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4926,7 +4317,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187,
+        lineNumber: 188,
         columnNumber: 22
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -4934,7 +4325,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188,
+        lineNumber: 189,
         columnNumber: 24
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4943,7 +4334,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189,
+        lineNumber: 190,
         columnNumber: 26
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4951,7 +4342,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191,
+        lineNumber: 192,
         columnNumber: 22
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -4959,7 +4350,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192,
+        lineNumber: 193,
         columnNumber: 24
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4968,7 +4359,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193,
+        lineNumber: 194,
         columnNumber: 26
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4978,7 +4369,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 198,
         columnNumber: 20
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -4986,7 +4377,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 198,
         columnNumber: 117
       }
     }), " "), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4996,7 +4387,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 198,
         columnNumber: 159
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -5004,7 +4395,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 198,
         columnNumber: 257
       }
     }), " "), " ")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5012,7 +4403,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 204,
         columnNumber: 8
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -5022,7 +4413,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 204,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -5031,7 +4422,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 204,
+        lineNumber: 205,
         columnNumber: 10
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5040,7 +4431,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208,
+        lineNumber: 209,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -5048,7 +4439,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 209,
+        lineNumber: 210,
         columnNumber: 6
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5056,7 +4447,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210,
+        lineNumber: 211,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -5064,7 +4455,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211,
+        lineNumber: 212,
         columnNumber: 10
       }
     }, " ", this.state.header, " USE CASES "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5072,7 +4463,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212,
+        lineNumber: 213,
         columnNumber: 10
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -5080,7 +4471,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212,
+        lineNumber: 213,
         columnNumber: 84
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_4___default.a, Object.assign({}, settings, {
@@ -5089,7 +4480,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214,
+        lineNumber: 215,
         columnNumber: 10
       }
     }), Object.keys(this.state.domainsUseCase).map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5097,7 +4488,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 218,
+        lineNumber: 219,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5105,7 +4496,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 219,
+        lineNumber: 220,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -5115,7 +4506,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 220,
+        lineNumber: 221,
         columnNumber: 19
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -5123,7 +4514,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221,
+        lineNumber: 222,
         columnNumber: 19
       }
     }, this.state.domainsUseCase[item].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -5131,7 +4522,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 222,
+        lineNumber: 223,
         columnNumber: 19
       }
     }, this.state.domainsUseCase[item].content)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5139,7 +4530,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229,
+        lineNumber: 230,
         columnNumber: 8
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -5149,7 +4540,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229,
+        lineNumber: 230,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -5158,7 +4549,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 230,
+        lineNumber: 231,
         columnNumber: 10
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5167,14 +4558,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 233,
+        lineNumber: 234,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Sofar__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234,
+        lineNumber: 235,
         columnNumber: 5
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5183,7 +4574,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 236,
+        lineNumber: 237,
         columnNumber: 5
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -5191,7 +4582,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 237,
+        lineNumber: 238,
         columnNumber: 6
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5199,7 +4590,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 238,
+        lineNumber: 239,
         columnNumber: 8
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5207,7 +4598,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 239,
+        lineNumber: 240,
         columnNumber: 10
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5215,7 +4606,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 240,
+        lineNumber: 241,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5223,21 +4614,21 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 241,
+        lineNumber: 242,
         columnNumber: 14
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 242,
+        lineNumber: 243,
         columnNumber: 16
       }
     }, "We'd love to here ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 242,
+        lineNumber: 243,
         columnNumber: 38
       }
     }, "from you")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5248,7 +4639,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245,
+        lineNumber: 246,
         columnNumber: 12
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5256,14 +4647,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246,
+        lineNumber: 247,
         columnNumber: 14
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247,
+        lineNumber: 248,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5271,14 +4662,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 248,
+        lineNumber: 249,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 249,
+        lineNumber: 250,
         columnNumber: 20
       }
     }, "My name is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -5286,7 +4677,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250,
+        lineNumber: 251,
         columnNumber: 20
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5294,14 +4685,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 252,
+        lineNumber: 253,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 253,
+        lineNumber: 254,
         columnNumber: 20
       }
     }, "I would like to talk about..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -5311,7 +4702,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 254,
+        lineNumber: 255,
         columnNumber: 20
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5319,14 +4710,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256,
+        lineNumber: 257,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257,
+        lineNumber: 258,
         columnNumber: 20
       }
     }, "Would you email me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -5334,7 +4725,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258,
+        lineNumber: 259,
         columnNumber: 20
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5342,14 +4733,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260,
+        lineNumber: 261,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261,
+        lineNumber: 262,
         columnNumber: 20
       }
     }, "or call me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -5357,7 +4748,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 262,
+        lineNumber: 263,
         columnNumber: 20
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5365,7 +4756,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264,
+        lineNumber: 265,
         columnNumber: 18
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -5374,7 +4765,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 265,
+        lineNumber: 266,
         columnNumber: 20
       }
     }, "send request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5382,7 +4773,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 266,
+        lineNumber: 267,
         columnNumber: 20
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -5390,7 +4781,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 266,
+        lineNumber: 267,
         columnNumber: 94
       }
     }), " "))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -5398,7 +4789,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273,
+        lineNumber: 274,
         columnNumber: 8
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -5408,7 +4799,7 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273,
+        lineNumber: 274,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -5417,14 +4808,14 @@ class Domains extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274,
+        lineNumber: 275,
         columnNumber: 10
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layouts_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 277,
+        lineNumber: 278,
         columnNumber: 5
       }
     }));
@@ -7488,7 +6879,7 @@ class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 45
       }
     }, index.post_content), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-      to: "/technology/" + index.post_id,
+      to: "/technology/" + index.post_slug,
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -11520,15 +10911,15 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
         params
       }
     } = this.props;
-    fetch(window.base_path + "/wp-json/wp/v2/pages/" + params.id).then(res => res.json()).then(result => {
+    fetch(window.base_path + "/wp-json/wp/v2/pages?slug=" + params.slug).then(res => res.json()).then(result => {
       this.setState({
         isLoaded: true,
-        technology: result,
-        header: result.title.rendered,
-        content: result.content.rendered,
-        slider: result.acf.slider,
-        techAcf: result.acf,
-        webTechSlider: result.acf.web_tech_slider
+        technology: result[0],
+        header: result[0].title.rendered,
+        content: result[0].content.rendered,
+        slider: result[0].acf.slider,
+        techAcf: result[0].acf,
+        webTechSlider: result[0].acf.web_tech_slider
       });
       fetch(window.base_path + "/wp-json/wp/v2/subtechnology").then(res => res.json()).then(result => {
         this.setState({
@@ -11807,29 +11198,29 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
         lineNumber: 130,
         columnNumber: 19
       }
-    }), Object.keys(this.state.slider).map((item, index) => this.state.slider[item].title.trim() !== "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), typeof this.state.slider !== "undefined" ? Object.keys(this.state.slider).map((item, index) => this.state.slider[item].title.trim() !== "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134,
-        columnNumber: 24
+        lineNumber: 135,
+        columnNumber: 44
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: index === 1 || index % 2 === 1 ? 'web_tech flex_direction' : 'web_tech',
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135,
-        columnNumber: 25
+        lineNumber: 136,
+        columnNumber: 45
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "image_items",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136,
-        columnNumber: 27
+        lineNumber: 137,
+        columnNumber: 47
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: typeof this.state.slider[item].image === 'string' ? this.state.slider[item].image : "",
@@ -11837,37 +11228,37 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137,
-        columnNumber: 27
+        lineNumber: 138,
+        columnNumber: 47
       }
     }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "content_items",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
-        columnNumber: 27
+        lineNumber: 139,
+        columnNumber: 47
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139,
-        columnNumber: 29
+        lineNumber: 140,
+        columnNumber: 49
       }
     }, this.state.slider[item].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
-        columnNumber: 29
+        lineNumber: 141,
+        columnNumber: 49
       }
-    }, this.state.slider[item].content)))) : ''))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, this.state.slider[item].content)))) : '') : '')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "mouse-icon",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 152,
         columnNumber: 13
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -11877,7 +11268,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 152,
         columnNumber: 42
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -11886,7 +11277,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152,
+        lineNumber: 153,
         columnNumber: 13
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11898,7 +11289,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158,
+        lineNumber: 159,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -11906,7 +11297,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159,
+        lineNumber: 160,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11914,7 +11305,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160,
+        lineNumber: 161,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11922,7 +11313,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161,
+        lineNumber: 162,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11930,7 +11321,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162,
+        lineNumber: 163,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11938,7 +11329,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163,
+        lineNumber: 164,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -11946,7 +11337,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 164,
+        lineNumber: 165,
         columnNumber: 21
       }
     }, " ", this.state.techAcf.web_tech_section_title, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11954,7 +11345,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165,
+        lineNumber: 166,
         columnNumber: 21
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -11962,7 +11353,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165,
+        lineNumber: 166,
         columnNumber: 95
       }
     }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_3___default.a, Object.assign({}, webTechsettings, {
@@ -11971,15 +11362,15 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166,
+        lineNumber: 167,
         columnNumber: 21
       }
-    }), Object.keys(this.state.webTechSlider).map((item, index) => this.state.webTechSlider[item].title.trim() !== "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), typeof this.state.slider !== "undefined" ? Object.keys(this.state.webTechSlider).map((item, index) => this.state.webTechSlider[item].title.trim() !== "" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170,
+        lineNumber: 172,
         columnNumber: 28
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -11987,7 +11378,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171,
+        lineNumber: 173,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -11996,7 +11387,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172,
+        lineNumber: 174,
         columnNumber: 29
       }
     }), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12004,15 +11395,15 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175,
+        lineNumber: 177,
         columnNumber: 29
       }
-    }, this.state.webTechSlider[item].title)) : '')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, this.state.webTechSlider[item].title)) : '') : ''))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-md-5 col-lg-4 col-sm-12 image_field_prot",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183,
+        lineNumber: 185,
         columnNumber: 17
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -12023,7 +11414,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183,
+        lineNumber: 185,
         columnNumber: 80
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -12032,7 +11423,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
+        lineNumber: 186,
         columnNumber: 17
       }
     }), " "), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12040,7 +11431,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187,
+        lineNumber: 189,
         columnNumber: 13
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -12050,7 +11441,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187,
+        lineNumber: 189,
         columnNumber: 42
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -12059,7 +11450,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188,
+        lineNumber: 190,
         columnNumber: 13
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12068,14 +11459,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191,
+        lineNumber: 193,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Sofar__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192,
+        lineNumber: 194,
         columnNumber: 11
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12084,7 +11475,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 195,
+        lineNumber: 197,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -12092,7 +11483,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 198,
+        lineNumber: 200,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12100,7 +11491,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 199,
+        lineNumber: 201,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12108,7 +11499,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 200,
+        lineNumber: 202,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12116,7 +11507,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 201,
+        lineNumber: 203,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12124,21 +11515,21 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 202,
+        lineNumber: 204,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 205,
         columnNumber: 21
       }
     }, "We'd love to here ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 205,
         columnNumber: 43
       }
     }, "from you")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12149,7 +11540,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 206,
+        lineNumber: 208,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12157,14 +11548,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207,
+        lineNumber: 209,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208,
+        lineNumber: 210,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12172,14 +11563,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 209,
+        lineNumber: 211,
         columnNumber: 23
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210,
+        lineNumber: 212,
         columnNumber: 25
       }
     }, "My name is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12187,7 +11578,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211,
+        lineNumber: 213,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12195,14 +11586,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213,
+        lineNumber: 215,
         columnNumber: 23
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214,
+        lineNumber: 216,
         columnNumber: 25
       }
     }, "I would like to talk about..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -12212,7 +11603,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 215,
+        lineNumber: 217,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12220,14 +11611,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 217,
+        lineNumber: 219,
         columnNumber: 23
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 218,
+        lineNumber: 220,
         columnNumber: 25
       }
     }, "Would you email me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12235,7 +11626,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 219,
+        lineNumber: 221,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12243,14 +11634,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221,
+        lineNumber: 223,
         columnNumber: 23
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 222,
+        lineNumber: 224,
         columnNumber: 25
       }
     }, "or call me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12258,7 +11649,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 223,
+        lineNumber: 225,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12266,7 +11657,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 225,
+        lineNumber: 227,
         columnNumber: 23
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -12275,7 +11666,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 226,
+        lineNumber: 228,
         columnNumber: 25
       }
     }, "send request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12283,7 +11674,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227,
+        lineNumber: 229,
         columnNumber: 25
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -12291,7 +11682,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227,
+        lineNumber: 229,
         columnNumber: 99
       }
     }), " "))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12299,7 +11690,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234,
+        lineNumber: 236,
         columnNumber: 13
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -12309,7 +11700,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234,
+        lineNumber: 236,
         columnNumber: 42
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -12318,14 +11709,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 235,
+        lineNumber: 237,
         columnNumber: 13
       }
     })), " "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layouts_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 240,
+        lineNumber: 242,
         columnNumber: 9
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12334,7 +11725,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 244,
+        lineNumber: 246,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12342,7 +11733,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245,
+        lineNumber: 247,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12353,7 +11744,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246,
+        lineNumber: 248,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12361,7 +11752,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 249,
+        lineNumber: 251,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -12371,7 +11762,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250,
+        lineNumber: 252,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -12380,7 +11771,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 251,
+        lineNumber: 253,
         columnNumber: 17
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12388,7 +11779,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255,
+        lineNumber: 257,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12396,14 +11787,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256,
+        lineNumber: 258,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257,
+        lineNumber: 259,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12411,14 +11802,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258,
+        lineNumber: 260,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259,
+        lineNumber: 261,
         columnNumber: 23
       }
     }, "My name is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12427,7 +11818,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260,
+        lineNumber: 262,
         columnNumber: 23
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12435,14 +11826,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 262,
+        lineNumber: 264,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 263,
+        lineNumber: 265,
         columnNumber: 23
       }
     }, "I would like to talk about..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
@@ -12452,7 +11843,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264,
+        lineNumber: 266,
         columnNumber: 23
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12460,14 +11851,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 266,
+        lineNumber: 268,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 267,
+        lineNumber: 269,
         columnNumber: 23
       }
     }, "Would you email me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12476,7 +11867,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 268,
+        lineNumber: 270,
         columnNumber: 23
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12484,14 +11875,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270,
+        lineNumber: 272,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 271,
+        lineNumber: 273,
         columnNumber: 23
       }
     }, "or call me at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12500,7 +11891,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272,
+        lineNumber: 274,
         columnNumber: 23
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12508,7 +11899,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274,
+        lineNumber: 276,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -12517,7 +11908,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275,
+        lineNumber: 277,
         columnNumber: 23
       }
     }, "send request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12525,7 +11916,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 276,
+        lineNumber: 278,
         columnNumber: 23
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -12533,7 +11924,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 276,
+        lineNumber: 278,
         columnNumber: 71
       }
     }), " ")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12542,7 +11933,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287,
+        lineNumber: 289,
         columnNumber: 9
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12550,7 +11941,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 288,
+        lineNumber: 290,
         columnNumber: 11
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12561,7 +11952,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 289,
+        lineNumber: 291,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12569,7 +11960,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 292,
+        lineNumber: 294,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -12579,7 +11970,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 293,
+        lineNumber: 295,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -12588,7 +11979,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 294,
+        lineNumber: 296,
         columnNumber: 17
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12596,7 +11987,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 298,
+        lineNumber: 300,
         columnNumber: 15
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12604,14 +11995,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 299,
+        lineNumber: 301,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 300,
+        lineNumber: 302,
         columnNumber: 19
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -12619,7 +12010,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 301,
+        lineNumber: 303,
         columnNumber: 21
       }
     }, "Could you send me the portfolio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12627,14 +12018,14 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 302,
+        lineNumber: 304,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 303,
+        lineNumber: 305,
         columnNumber: 23
       }
     }, "My email id is"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -12642,7 +12033,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 304,
+        lineNumber: 306,
         columnNumber: 23
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12650,7 +12041,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 306,
+        lineNumber: 308,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -12659,7 +12050,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 307,
+        lineNumber: 309,
         columnNumber: 23
       }
     }, "send request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -12667,7 +12058,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 308,
+        lineNumber: 310,
         columnNumber: 23
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -12675,7 +12066,7 @@ class Technologies extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Componen
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 308,
+        lineNumber: 310,
         columnNumber: 97
       }
     }), " ")))))))));

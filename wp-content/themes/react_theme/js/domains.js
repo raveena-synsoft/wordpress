@@ -1,7 +1,7 @@
 
 
 if (jQuery(window).width() >= 1025) {
-  $(document).ready(function() {
+ /* $(document).ready(function() {
     anchors = [];
     navigation = [];
     $('.pagepillDomain').pagepiling({
@@ -13,8 +13,8 @@ if (jQuery(window).width() >= 1025) {
       'tooltips': ['Introduction', 'Features', 'Send Request', 'Use Cases', 'So Far', 'Connect With Us', 'Quick Links']
       }
    });
-  });   
-}
+  });  */
+} 
   $(document).on('mouseenter', 'li.feature_html', function() {
     var id = $(this).attr('id');
     $("div.left_container").removeClass("show_flex");

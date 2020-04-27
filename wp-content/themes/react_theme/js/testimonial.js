@@ -148,7 +148,7 @@ $('.domain-slider').slick({
 	if (jQuery(window).width() >= 1025) {
    
 
-	  $(document).ready(function() {
+	  /*$(document).ready(function() {
 	    	$('#pagepiling').pagepiling({
 	    		menu: '#menu',
 	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
@@ -158,7 +158,7 @@ $('.domain-slider').slick({
 			   	'tooltips': ['1', '2', '3', '4', '5', '6', '7']
 			   	}
 			});
-	    });		
+	    });	*/	
 }
  
 

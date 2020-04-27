@@ -50,7 +50,7 @@
     <!-- CSS for full page scroll css -->
     <link rel="stylesheet" type="text/css" href="<?php echo $TEMPLATE_PATH; ?>/react-src/public/css/jquery.pagepiling.min.css" />
     <title>Synsoft Global</title>
-<link href="/wordpress/wp-content/themes/react_theme/static/css/1.chunk.css?e78f0817518c05666286" rel="stylesheet"><link href="/wordpress/wp-content/themes/react_theme/static/css/main.chunk.css?e78f0817518c05666286" rel="stylesheet"></head>
+<link href="/wordpress/wp-content/themes/react_theme/static/css/1.chunk.css?d6259e35d6985e22ba8b" rel="stylesheet"><link href="/wordpress/wp-content/themes/react_theme/static/css/main.chunk.css?d6259e35d6985e22ba8b" rel="stylesheet"></head>
     <body class='home'>
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/jquery-3.4.1.min.js"></script>
         
@@ -81,5 +81,5 @@
     <script src="<?php echo $TEMPLATE_PATH; ?>/react-src/public/js/smartphoto.js"></script>
 
     
-    <script src="/wordpress/wp-content/themes/react_theme/static/js/bundle.js?e78f0817518c05666286"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/1.chunk.js?e78f0817518c05666286"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/main.chunk.js?e78f0817518c05666286"></script></body>
+    <script src="/wordpress/wp-content/themes/react_theme/static/js/bundle.js?d6259e35d6985e22ba8b"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/1.chunk.js?d6259e35d6985e22ba8b"></script><script src="/wordpress/wp-content/themes/react_theme/static/js/main.chunk.js?d6259e35d6985e22ba8b"></script></body>
 </html>

@@ -17,9 +17,8 @@ if (jQuery(window).width() <= 767) {
 
 // Full page scroll JS  -->
 
-$('#pagepiling').pagepiling({});
-$(document).ready(function() {
-});
+//$('#pagepiling').pagepiling({});
+
 /*$(document).ready(function() {
     anchors = [];
     navigation = [];
